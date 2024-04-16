@@ -54,10 +54,10 @@ export default makeScene2D(function* (view) {
   yield tween(.8, value => {
     img1().position.x(map(1400, 0, easeOutCubic(value)))
   });
-  yield* img1().opacity(1, 0.8);
+  yield* img1().opacity(1, 0.5);
 
-  yield parabola1().end(1, 1);
-  yield* parabola1().smoothness(0.525, 1);
+  yield parabola1().end(1, 0.6);
+  yield* parabola1().smoothness(0.525, 0.6);
 
   yield tween(1, value => {
     img1().position.x(map(img1().x(), 300, easeInOutCubic(value)))
@@ -100,12 +100,12 @@ export default makeScene2D(function* (view) {
   yield* text1a().text("f(x)=-0.22x²+1.04", 0.5);
   yield* textroot().y(textroot().y() - 30, 0.5);
   yield* all(
-    text1b().opacity(1, 0.5),
+    text1b().opacity(1, 0.3),
     text1b().text("f(x)=-.22(x-2.1742)(x+2.1742)", 0.5),
   );
   
   yield* all(
-    text1c().opacity(1, 0.5),
+    text1c().opacity(1, 0.3),
     text1c().text("f(x)=-0.22x²+1.04", 0.5),
   );
 
@@ -195,19 +195,19 @@ export default makeScene2D(function* (view) {
 
   yield* text1a().opacity(0, 0.3);
   yield* all(
-    img2().opacity(1, 0.8),
+    img2().opacity(1, 0.4),
     text2a().text("f(x)=-0.36x²+0.1x+0.6", 0.8),
-    parabola2().end(1, 0.8),
+    parabola2().end(1, 0.4),
   );
   
   yield* all(
-    text2b().text("f(x)=-0.36(x+1.16)(x-1.437)", 0.8),
-    text2b().opacity(1, 0.8),
-    parabola2().smoothness(0.4, 0.8),
+    text2b().text("f(x)=-0.36(x+1.16)(x-1.437)", 0.4),
+    text2b().opacity(1, 0.4),
+    parabola2().smoothness(0.4, 0.4),
   );
 
   yield* all(
-    text2c().text("f(x)=-0.36(x-0.139)²+0.607", 0.8),
+    text2c().text("f(x)=-0.36(x-0.139)²+0.607", 0.4),
     text2c().opacity(1,0.8),
   );
 
@@ -217,9 +217,9 @@ export default makeScene2D(function* (view) {
   });
 
   yield* all(
-    text2a().text("f(x)=0.36x²-0.1x-0.6", 0.8),
-    text2b().text("f(x)=0.36(x+1.16)(x-1.437) ", 0.8),
-    text2c().text("f(x)=0.36(x-0.139)²-0.607", 0.8),
+    text2a().text("f(x)=0.36x²-0.1x-0.6", 0.4),
+    text2b().text("f(x)=0.36(x+1.16)(x-1.437) ", 0.4),
+    text2c().text("f(x)=0.36(x-0.139)²-0.607", 0.4),
     spring(PlopSpring, 0, 180, .2, value => {
       img2().rotation(value);
     }),
@@ -227,9 +227,9 @@ export default makeScene2D(function* (view) {
 
   yield* beginSlide("Explanation 2");
   yield* all(
-    text2b().text("",0.8),
-    text2c().text("", 0.8),
-    text2a().scale(.8, 0.8),
+    text2b().text("",0.4),
+    text2c().text("", 0.4),
+    text2a().scale(.8, 0.4),
     text2a().text("This is a parabola\nbecause it has two\ncurves that are\nexponential and that\nmeet at a vertex, also it\nis a parabola because it\nis in a similar shape as\na parabola", 0.8),
   );
 
