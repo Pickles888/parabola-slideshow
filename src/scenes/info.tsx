@@ -222,36 +222,36 @@ export default makeScene2D(function* (view) {
 
   yield* chain(
     all(
-      titlebox().position.y(-470, 0.8, easeOutExpo),
-      title().text("Parabola 1", 0.8),
-      parabola1().start(0, 0.8),
-      parabola1().end(1, 0.8),
+      titlebox().position.y(-470, 0.5, easeOutExpo),
+      title().text("Parabola 1", 0.5),
+      parabola1().start(0, 0.5),
+      parabola1().end(1, 0.5),
     ),
 
-    domain().opacity(1, 0.8),
+    domain().opacity(1, 0.5),
     waitFor(2),
     all(
-      domain().position([-550, 100], 0.7),
-      domainRotation(270, 0.7),
+      domain().position([-550, 100], 0.4),
+      domainRotation(270, 0.4),
     ),
 
-    longboi().width(700, 0.8),
-    domainText().text("-0.607<y<1.04", 0.8),
+    longboi().width(700, 0.5),
+    domainText().text("-0.607<y<1.04", 0.5),
 
     beginSlide("xint1a"),
     
-    domain().opacity(0, 0.8),
+    domain().opacity(0, 0.5),
     all(
-      domain().opacity(0, 0.8),
+      domain().opacity(0, 0.5),
       longboi().width(900, 0),
       domainRotation(180, 0),
       domain().position([40, 300], 0),
     ),
 
     all(
-      root().position.x(600, 0.8),
-      splineScale(3.5, 0.8),
-      scale(3.5, 0.8),
+      root().position.x(600, 0.5),
+      splineScale(3.5, 0.5),
+      scale(3.5, 0.5),
     ),
 
     dCoords(
@@ -283,9 +283,9 @@ export default makeScene2D(function* (view) {
 
   yield* chain(
     all(
-      root().position([0, 200], 0.8, easeOutBack),
-      parabolaInt1().size(0, 0.8),
-      parabolaIntText().text("", 0.8),
+      root().position([0, 200], 0.5, easeOutBack),
+      parabolaInt1().size(0, 0.5),
+      parabolaIntText().text("", 0.5),
     ),
 
     dCoords(
@@ -300,53 +300,53 @@ export default makeScene2D(function* (view) {
   );
 
   yield* all(
-    scale(1, 0.8),
-    splineScale(1, 0.8),
-    root().position([0, 0], 0.8),
+    scale(1, 0.5),
+    splineScale(1, 0.5),
+    root().position([0, 0], 0.5),
   ),
   
   yield* chain(
     parabolaInt1().position.y(-105, 0),
-    parabolaInt1().size(40, 0.8),
+    parabolaInt1().size(40, 0.5),
     all(
       parabolaInt1().ripple(),
-      vertexCard().width(590, 0.8),
+      vertexCard().width(590, 0.5),
     ),
     beginSlide("domain/range2"),
     all(
-      vertexCard().width(0, 0.8),
-      parabolaInt1().size(0, 0.8),
+      vertexCard().width(0, 0.5),
+      parabolaInt1().size(0, 0.5),
     ),
-    parabola1().end(0, 0.8),
+    parabola1().end(0, 0.5),
   );
 
   yield* chain(
     
     all(
-      titlebox().fill("#ca9ee6", 0.8),
-      title().text("", 0.8),
-      parabola2().start(1, 0.8),
+      titlebox().fill("#ca9ee6", 0.5),
+      title().text("", 0.5),
+      parabola2().start(1, 0.5),
     ),
 
     domainText().text("-2.5<x<2.5", 0),
-    domain().opacity(1, 0.8),
+    domain().opacity(1, 0.5),
     waitFor(2),
     
     all(
       domainRotation(270, 0.8),
-      domain().position([-500, -80], 0.8),
+      domain().position([-500, -80], 0.5),
     ),
     longboi().width(600, 0.4),
     domainText().text("-0.3<y<1.04", 0.4),
 
     beginSlide("xint2a"),
-    domain().opacity(0, 0.8),
+    domain().opacity(0, 0.5),
 
     all(
-      root().position.x(600, 0.8),
-      splineScale(3.5, 0.8),
-      scale(3.5, 0.8),
-      title().text("Parabola 2", 0.8),
+      root().position.x(600, 0.5),
+      splineScale(3.5, 0.5),
+      scale(3.5, 0.5),
+      title().text("Parabola 2", 0.5),
     ),
 
     dCoords(
@@ -361,7 +361,7 @@ export default makeScene2D(function* (view) {
   );
 
   yield* chain(
-    root().position.x(-600, 0.8),
+    root().position.x(-600, 0.5),
     dCoords(
       parabolaInt2(), 
       [725, 0], 
@@ -373,7 +373,7 @@ export default makeScene2D(function* (view) {
   );
 
   yield* chain(
-    root().position([0, -250], 0.8),
+    root().position([0, -250], 0.5),
     dCoords(
       parabolaInt2(), 
       [0, 360], 
@@ -386,31 +386,31 @@ export default makeScene2D(function* (view) {
 
   yield* chain(
     all(
-      scale(1, 0.8),
-      splineScale(1, 0.8),
-      root().position([0, 0], 0.8),
+      scale(1, 0.5),
+      splineScale(1, 0.5),
+      root().position([0, 0], 0.5),
     ), 
 
     vertexText().text("(0.139, -0.607)", 0),
-    parabolaInt2().position([35, 100], 0.8),
+    parabolaInt2().position([35, 100], 0.5),
 
     all(
-      vertexCard().width(590, 0.8),
-      parabolaInt2().size(40, 0.8),
+      vertexCard().width(590, 0.5),
+      parabolaInt2().size(40, 0.5),
       parabolaInt2().ripple(),
     ),
 
     beginSlide("END"),
 
     all(
-      parabolaInt2().size(0, 0.8),
-      vertexCard().width(0, 0.8),
+      parabolaInt2().size(0, 0.5),
+      vertexCard().width(0, 0.5),
     ),
     
     all(
-      parabola2().start(0, 0.8),
-      titlebox().position.y(-1000, 0.8),
-      root().opacity(0, 0.8),
+      parabola2().start(0, 0.5),
+      titlebox().position.y(-1000, 0.5),
+      root().opacity(0, 0.5),
     ),
   );
 
@@ -424,23 +424,23 @@ export default makeScene2D(function* (view) {
     />
   );
 
-  yield* endText().text("Thank You For Listening! :)", 0.8);
+  yield* endText().text("Thank You For Listening! :)", 0.5);
 });
 
 function* dCoords(inter: Circle, position: SignalValue<PossibleVector2<number>>, offsetX: number, offsetY: number, textObj: Txt, text: SignalValue<string>, slideName: string) {
   yield* chain(
     inter.position(position, 0),
     textObj.position([inter.position.x() + offsetX, inter.position.y() - 60 + offsetY], 0),
-    inter.size(60, 0.8),
+    inter.size(60, 0.5),
     all(
-      textObj.text(text, 0.8),
+      textObj.text(text, 0.5),
       inter.ripple(),
     ),
   );
 
   yield* beginSlide(slideName);
   yield* all(
-    textObj.text("", 0.8),
-    inter.size(0, 0.8),
+    textObj.text("", 0.5),
+    inter.size(0, 0.5),
   );
 }
